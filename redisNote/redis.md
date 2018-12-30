@@ -43,7 +43,7 @@
   * ptr 是一个指针，指向实际保存值的数据结构，这个数据结构由 type 属性和 encoding 属性决定      
      例如：如果一个redisObject的type属性为REDIS_LIST，encoding属性为REDIS_ENCODING_LINKEDLIST ，那么这个对象就是一个 Redis 列表，它的值保存在一个双端链表内，而 ptr 指针就指向这个双端链表；    
      上图：   
-     ![](https://github.com/FantasmYi/CodeMonkeyNote/blob/master/redisObject.png)    
+     ![](https://github.com/FantasmYi/CodeMonkeyNote/blob/master/image/redisObject.png)    
      
 ###  执行一个处理数据类型的命令时，redis执行步骤：   
     1.根据给定key，在数据库字典中查找和它对应的redisObject对象，没找到返回null。   
@@ -53,4 +53,8 @@
 
 * [内部数据结构](https://github.com/FantasmYi/CodeMonkeyNote/blob/master/redisNote/redis1.md)    
 * [内部映射数据结构](https://github.com/FantasmYi/CodeMonkeyNote/blob/master/redisNote/redis2.md)    
-* [五大数据类型](https://github.com/FantasmYi/CodeMonkeyNote/blob/master/redisNote/redis3.md)    
+* [五大数据类型](https://github.com/FantasmYi/CodeMonkeyNote/blob/master/redisNote/redis3.md)     
+
+
+# 参考资料   
+  * redis设计与实现（第一版） 黄健宏   
