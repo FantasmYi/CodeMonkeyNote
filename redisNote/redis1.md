@@ -99,7 +99,7 @@
        实现有序集数据类型   
   *  实现方式：  
        跳跃表将指向有序集的score值和member域的指针作为元素，以score值（可重复）作为索引，对有序集进行排序。注：对比同一个元素需要同时检查它的score和member。每个节点带有高度为1的指针，可以实现从表尾到表头方向迭代。        
-      ![image](https://github.com/FantasmYi/CodeMonkeyNote/blob/master/JumpTable.png)    
+      ![image](https://github.com/FantasmYi/CodeMonkeyNote/blob/master/image/JumpTable.png)    
       * 表头：负责维护跳跃表的节点指针  
       * 跳跃表节点：保存着元素值，以及多个层  
       * 层：保存着指向其他元素的指针。高层的指针越过的元素数量大于等于低层的指针，为了提高查找的效率，程序总是从高层先开始访问，然后随着元素值范围的缩小，慢慢降低层次  
