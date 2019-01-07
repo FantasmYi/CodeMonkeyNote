@@ -31,7 +31,7 @@ redis提供了两种持久化机制：
    * save直接调用rdbSave,阻塞主线程，知道保存完成为止。在主线程阻塞期间，服务器不能处理任何请求。 
    * BGSAVE则fork出一个子进程，子进程负责调用rdbSave,并在保存完成后向主线程发送信号，通知保存完成，因为是在子线程中调用的，所以主线程阻塞期间，服务器仍然可以处理请求。
  * RDB的文件结构 
-   https://github.com/FantasmYi/CodeMonkeyNote/blob/master/image/RDB.png    
+   ![](https://github.com/FantasmYi/CodeMonkeyNote/blob/master/image/RDB.png)    
     * redis:文件最开始保存着redis的五个字符，标识着一个RDB文件的开始。作用：读入文件时，检查一个文件的前五个字节，判断该文件是否是RDB文件 
     * rdb-version:一个四字节长的以字符表示的整数，记录该文件所使用的RDB版本号
     * db-data:每个db-data部分保存着服务器上一个非空数据库的所有数据
