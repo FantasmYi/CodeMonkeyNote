@@ -107,6 +107,6 @@
       
       
 # 参考资料   
-  * redis设计与实现（第一版） 黄健宏   
+  * redis设计与实现（第一版） 黄健宏    
   * http://www.cnblogs.com/chenpingzhao/archive/2017/06/10/6965164.html
           
