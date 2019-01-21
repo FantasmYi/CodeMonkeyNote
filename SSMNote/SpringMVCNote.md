@@ -6,7 +6,7 @@
   整个流程控制的中心，由它调用其他组件处理用户的请求。DispatcherServlet的存在降低了组件之间的耦合性。   
 ###  HandlerMapping   
   处理映射器   
-* 负责根据用户请求找到handler(处理器，如：用户自定义的Controller）,springmvc提供了不同的映射器实现不同的映射方式，例如：配置文件，注解方式等。   
+* 负责根据用户请求找到<font color=#FF0000>handler(处理器</font>，如：用户自定义的Controller）,springmvc提供了不同的映射器实现不同的映射方式，例如：配置文件，注解方式等。   
 * 映射器相当于配置信息或注解描述，内部封装一个类似map的数据结构，使用Url作为Key,HandlerExecutionChain作为value。核心控制器，可以通过请求对象（请求对象
 中包含URL），在handlerMapping中查询HandlerExecutionChain对象。     
 * 是SpringMVC核心组件之一，是必不可少的组件。无论是否配置，SpringMVC会有默认提供（RequestMappingHandlerMapping）。     
