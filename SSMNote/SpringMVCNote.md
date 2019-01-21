@@ -1,4 +1,6 @@
 # SpringMVC   
+ 执行逻辑图：    
+ ![]{https://github.com/FantasmYi/CodeMonkeyNote/blob/master/image/springMVC.png}
 ###  DispatcherServlet   
   前端控制器   
   整个流程控制的中心，由它调用其他组件处理用户的请求。DispatcherServlet的存在降低了组件之间的耦合性。   
