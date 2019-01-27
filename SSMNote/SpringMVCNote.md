@@ -29,3 +29,8 @@
 ```
 ### ViewResolver 
  负责将处理结果生成View视图,ViewResolver首先根据逻辑视图名解析成物理视图名即具体的页面地址，再生成view对象，最后对view进行渲染将处理结果通过页面展示给用户.视图解析器是用来处理动态视图逻辑的。静态视图逻辑，不通过SpringMVC流程。直接通过WEB中间件（tomcat）就可以访问静态资源。
+ 
+补充：
+  * ModelAndView 跳转视图+数据
+  * void 异步时 ajax
+  * String 跳转视图+Model(到达了视图和数据分开的效果)
