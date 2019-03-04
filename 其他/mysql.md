@@ -1,4 +1,17 @@
 ## 索引
+### 索引的类型  
+ * 主键索引     
+   在主键列上创建索引
+ * 唯一索引      
+   索引列上的值不允许重复，可以有NULL值
+ * 普通索引  
+   基本的索引类型，值可以重复，没有唯一性的限制 
+ * 全文索引  
+   可以在char,varchar,text的列上创建      
+ #### 主键索引和唯一索引的区别：  
+   主键创建后一定包含一个唯一索引，但唯一索引不一定是主键索引  
+   主键列在创建时，已经默认为null+唯一索引  
+   主键索引一张表只能有一个，唯一索引可以有多个
 ### 建立索引的优缺点及适合建立索引的字段
 #### 优点：
  * 通过创建唯一性索引，可以保证数据表中每一行数据的唯一性
@@ -44,13 +57,13 @@
   
 ## mysql的两个引擎
  注意：mysql的引擎是表级别，不是数据库级别   
-### myisam
+### myisam(非聚集索引)
  索引文件和数据文件是分离的     
  mysql->data->employess 文件夹下使用myisam殷勤的几种文件类型：.fm是表结构存储文件 .MYD存储表结构 .MYI存储索引文件    
  ![](https://github.com/FantasmYi/CodeMonkeyNote/blob/master/image/myisam.png)   
  注意：叶子节点存储的是某一行记录的文件指针，不是data，这里和Innodb有区别    
  myisam的主键索引和非主键索引都是用b+树实现的，但是两个索引不在一棵树上。    
-### innodb
+### innodb(聚集索引)
 位置同上， .fm是表结构文件 .ibd是表索引+数据文件    
 下图是主键索引    
 ![](https://github.com/FantasmYi/CodeMonkeyNote/blob/master/image/innodb.png)     
