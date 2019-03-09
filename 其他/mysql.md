@@ -59,12 +59,14 @@
 ## mysql的两个引擎
  注意：mysql的引擎是表级别，不是数据库级别   
 ### myisam(非聚集索引)
+ 非聚集索引：索引的逻辑顺序与磁盘上行的物理存储顺序不同，一个表中可以拥有多个非聚集索引
  索引文件和数据文件是分离的     
  mysql->data->employess 文件夹下使用myisam殷勤的几种文件类型：.fm是表结构存储文件 .MYD存储表结构 .MYI存储索引文件    
  ![](https://github.com/FantasmYi/CodeMonkeyNote/blob/master/image/myisam.png)   
  注意：叶子节点存储的是某一行记录的文件指针，不是data，这里和Innodb有区别    
  myisam的主键索引和非主键索引都是用b+树实现的，但是两个索引不在一棵树上。    
 ### innodb(聚集索引)
+聚集索引：数据行的物理顺序与列值（一般是主键的那一列）的逻辑顺序相同，一个表中只能拥有一个聚集索引
 位置同上， .fm是表结构文件 .ibd是表索引+数据文件    
 下图是主键索引    
 ![](https://github.com/FantasmYi/CodeMonkeyNote/blob/master/image/innodb.png)     
